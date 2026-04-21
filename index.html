@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Sauna | Retrofit-Ready Sauna Control Kit</title>
+    <meta
+      name="description"
+      content="Smart Sauna is a university-built sauna kit with a 7-inch touchscreen, environmental monitoring, smoke sensing, LED control, Bluetooth audio, and customizable sauna session profiles."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ember: {
+                50: "#fff7f1",
+                100: "#ffe7d1",
+                200: "#ffc9a1",
+                300: "#f5a86f",
+                400: "#e97d48",
+                500: "#cf5b2c",
+                600: "#ad421f",
+                700: "#8b321a",
+                800: "#5f2316",
+                900: "#33140d",
+              },
+              bark: {
+                950: "#130b08",
+              },
+              sand: {
+                100: "#f7ede3",
+                200: "#ecddcc",
+              },
+            },
+            fontFamily: {
+              display: ["Fraunces", "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            boxShadow: {
+              glow: "0 30px 80px rgba(137, 57, 23, 0.28)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Manrope", sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(223, 108, 52, 0.14), transparent 32%),
+          linear-gradient(180deg, #170d09 0%, #120907 38%, #0d0705 100%);
+      }
+
+      .grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.14;
+        mix-blend-mode: soft-light;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 28px 28px;
+        mask-image: radial-gradient(circle at center, black, transparent 88%);
+      }
+
+      .hero-wood {
+        background:
+          linear-gradient(135deg, rgba(255, 248, 239, 0.1), rgba(255, 248, 239, 0.02)),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+      }
+
+      .section-glow {
+        background:
+          radial-gradient(circle at top left, rgba(224, 114, 60, 0.16), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(167, 63, 30, 0.2), transparent 28%);
+      }
+
+      .phone-float {
+        animation: drift 6.5s ease-in-out infinite;
+      }
+
+      .steam-line {
+        animation: steam 4.2s ease-in-out infinite;
+      }
+
+      @keyframes drift {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes steam {
+        0%,
+        100% {
+          opacity: 0.28;
+          transform: translateY(0px) scaleX(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: translateY(-8px) scaleX(1.08);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-bark-950 text-sand-100 antialiased">
+    <div id="top" class="relative isolate overflow-hidden">
+      <div class="grain"></div>
+
+      <header class="relative z-10">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
+          <a href="#top" class="flex items-center gap-3">
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded-full border border-ember-300/20 bg-ember-400/10 text-sm font-bold tracking-[0.25em] text-ember-100"
+            >
+              SS
+            </div>
+            <div>
+              <div class="text-sm uppercase tracking-[0.32em] text-ember-200/70">
+                Smart Sauna
+              </div>
+              <div class="text-xs text-sand-200/55">University project</div>
+            </div>
+          </a>
+
+          <nav class="hidden items-center gap-8 text-sm text-sand-200/72 md:flex">
+            <a href="#product" class="transition hover:text-white">Product</a>
+            <a href="#features" class="transition hover:text-white">Features</a>
+            <a href="#project" class="transition hover:text-white">Project</a>
+            <a href="#contact" class="transition hover:text-white">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="relative z-10 border-b border-white/8">
+          <div class="mx-auto max-w-7xl px-6 pb-20 pt-6 md:px-10 md:pb-28">
+            <div class="grid items-center gap-16 lg:grid-cols-[1.05fr,0.95fr]">
+              <div>
+                <div
+                  class="inline-flex items-center gap-3 rounded-full border border-ember-300/18 bg-ember-300/10 px-4 py-2 text-sm text-ember-100"
+                >
+                  <span class="h-2 w-2 rounded-full bg-ember-300"></span>
+                  Retrofit-ready sauna control kit
+                </div>
+
+                <h1
+                  class="mt-7 max-w-4xl font-display text-5xl leading-tight text-white md:text-7xl"
+                >
+                  Bring a smarter, warmer ritual to any sauna.
+                </h1>
+
+                <p class="mt-7 max-w-2xl text-lg leading-8 text-sand-200/78 md:text-xl">
+                  Smart Sauna is a university-built hardware kit designed to
+                  modernize new or existing saunas without turning the whole
+                  room into a renovation project. It adds a 7-inch touchscreen,
+                  live environment sensing, session profiles, Bluetooth audio,
+                  LED mood control, and smoke detection in one clear package.
+                </p>
+
+                <div class="mt-9 flex flex-wrap gap-4">
+                  <a
+                    href="#contact"
+                    class="rounded-full bg-ember-400 px-7 py-3.5 text-sm font-semibold text-bark-950 transition hover:-translate-y-0.5 hover:bg-ember-300"
+                  >
+                    Talk to the team
+                  </a>
+                  <a
+                    href="#features"
+                    class="rounded-full border border-white/12 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                  >
+                    Explore the kit
+                  </a>
+                </div>
+
+                <div
+                  class="mt-10 grid max-w-3xl gap-5 border-t border-white/8 pt-8 text-sm text-sand-200/68 sm:grid-cols-2 xl:grid-cols-4"
+                >
+                  <div>
+                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
+                      Install
+                    </div>
+                    <p class="mt-2 leading-7">
+                      DIY friendly, with optional paid installation.
+                    </p>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
+                      Fit
+                    </div>
+                    <p class="mt-2 leading-7">
+                      Suitable for new builds and retrofit sauna upgrades.
+                    </p>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
+                      Safety
+                    </div>
+                    <p class="mt-2 leading-7">
+                      Tracks temperature, humidity, and smoke events.
+                    </p>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
+                      Note
+                    </div>
+                    <p class="mt-2 leading-7">
+                      Current version does not control sauna heating.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="absolute inset-0 -z-10 blur-3xl">
+                  <div
+                    class="absolute left-8 top-16 h-40 w-40 rounded-full bg-ember-500/25"
+                  ></div>
+                  <div
+                    class="absolute bottom-10 right-8 h-52 w-52 rounded-full bg-amber-200/10"
+                  ></div>
+                </div>
+
+                <div class="relative mx-auto max-w-xl">
+                  <div
+                    class="hero-wood rounded-[2.5rem] border border-white/10 p-4 shadow-glow"
+                  >
+                    <div class="grid gap-4 lg:grid-cols-[0.9fr,1.1fr]">
+                      <div class="relative overflow-hidden rounded-[2rem]">
+                        <img
+                          src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+                          alt="Warm wooden sauna interior"
+                          class="h-full min-h-[26rem] w-full object-cover"
+                        />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-bark-950/75 via-transparent to-transparent"
+                        ></div>
+                        <div
+                          class="absolute bottom-5 left-5 max-w-[14rem] rounded-3xl border border-white/12 bg-black/28 px-4 py-3 backdrop-blur"
+                        >
+                          <div class="text-xs uppercase tracking-[0.3em] text-ember-100/70">
+                            For the entrance
+                          </div>
+                          <p class="mt-2 text-sm leading-6 text-sand-100/85">
+                            The main touchscreen sits just outside the sauna for
+                            simple, safe access.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="relative overflow-hidden rounded-[2rem] bg-[#1a0f0a] p-5">
+                        <div
+                          class="absolute inset-0 bg-gradient-to-b from-ember-300/10 to-transparent"
+                        ></div>
+                        <div
+                          class="absolute right-8 top-7 h-20 w-20 rounded-full bg-amber-100/8 blur-2xl"
+                        ></div>
+
+                        <div class="relative phone-float mx-auto mt-2 max-w-[17rem]">
+                          <div class="rounded-[2.2rem] bg-[#120906] p-3 shadow-2xl">
+                            <div
+                              class="rounded-[1.8rem] border border-ember-300/12 bg-gradient-to-b from-[#342118] to-[#1b100b] p-4"
+                            >
+                              <div class="flex items-center justify-between text-[0.72rem] text-sand-200/70">
+                                <span>Session profile</span>
+                                <span>19:42</span>
+                              </div>
+                              <div class="mt-4 font-display text-2xl text-white">
+                                Evening Steam
+                              </div>
+                              <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+                                <div class="rounded-2xl bg-white/6 p-3">
+                                  <div class="text-sand-200/55">Temp</div>
+                                  <div class="mt-1 text-xl font-semibold text-white">
+                                    81°C
+                                  </div>
+                                </div>
+                                <div class="rounded-2xl bg-white/6 p-3">
+                                  <div class="text-sand-200/55">Humidity</div>
+                                  <div class="mt-1 text-xl font-semibold text-white">
+                                    28%
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mt-4 rounded-2xl bg-ember-400 px-4 py-3 text-sm font-semibold text-bark-950">
+                                Start profile
+                              </div>
+                              <div class="mt-4 flex items-center gap-2">
+                                <span
+                                  class="h-3 w-3 rounded-full bg-rose-300 shadow-[0_0_0_6px_rgba(252,165,165,0.08)]"
+                                ></span>
+                                <span class="text-xs text-sand-100/72">
+                                  Lighting, music, and monitoring ready
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="relative mt-7 space-y-3">
+                          <div class="steam-line h-px w-24 bg-amber-100/25"></div>
+                          <div class="steam-line h-px w-16 bg-amber-100/20"></div>
+                          <div class="steam-line h-px w-20 bg-amber-100/18"></div>
+                        </div>
+
+                        <div class="relative mt-7 space-y-5">
+                          <div class="flex items-start gap-3">
+                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ember-300"></span>
+                            <p class="text-sm leading-7 text-sand-200/74">
+                              Main controller inside the 7-inch touchscreen
+                              unit.
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-3">
+                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ember-300"></span>
+                            <p class="text-sm leading-7 text-sand-200/74">
+                              Secondary controller handles peripheral sensors.
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-3">
+                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ember-300"></span>
+                            <p class="text-sm leading-7 text-sand-200/74">
+                              Built for a calmer sauna experience, not just
+                              data collection.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mt-6 grid gap-4 text-sm text-sand-200/70 sm:grid-cols-3"
+                  >
+                    <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4">
+                      7" touchscreen outside the sauna entrance
+                    </div>
+                    <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4">
+                      Bluetooth music from the screen or your phone
+                    </div>
+                    <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4">
+                      Profiles to start and end sessions with one tap
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="product" class="relative z-10 border-b border-white/8">
+          <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
+            <div class="grid gap-14 lg:grid-cols-[0.9fr,1.1fr] lg:items-end">
+              <div>
+                <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
+                  Why it matters
+                </p>
+                <h2 class="mt-4 max-w-xl font-display text-4xl leading-tight text-white md:text-5xl">
+                  Built as a kit, so the upgrade feels practical.
+                </h2>
+                <p class="mt-6 max-w-xl text-base leading-8 text-sand-200/75">
+                  Smart Sauna is meant to fit real buying decisions. Because it
+                  comes as a hardware kit, it can be integrated into a fresh
+                  sauna build or added to an existing sauna without redesigning
+                  the whole system. That makes it easier to install, easier to
+                  pitch, and easier to imagine in real use.
+                </p>
+                <p class="mt-4 max-w-xl text-base leading-8 text-sand-200/75">
+                  Customers can install it themselves, or choose a paid
+                  installation service if they want a more turnkey experience.
+                </p>
+              </div>
+
+              <div class="section-glow rounded-[2.5rem] border border-white/10 p-5">
+                <div class="grid gap-5 md:grid-cols-[1.05fr,0.95fr]">
+                  <div class="overflow-hidden rounded-[2rem]">
+                    <img
+                      src="https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=1200&q=80"
+                      alt="Sauna bench with warm wood textures"
+                      class="h-full min-h-[26rem] w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col justify-between gap-5">
+                    <div class="overflow-hidden rounded-[2rem]">
+                      <img
+                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+                        alt="Warm interior lighting detail"
+                        class="h-48 w-full object-cover"
+                      />
+                    </div>
+                    <div class="rounded-[2rem] border border-white/10 bg-[#1a0f0a]/90 p-6">
+                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
+                        Installation paths
+                      </div>
+                      <div class="mt-6 space-y-5">
+                        <div class="border-l border-ember-300/35 pl-4">
+                          <h3 class="text-lg font-semibold text-white">DIY install</h3>
+                          <p class="mt-2 text-sm leading-7 text-sand-200/72">
+                            Ideal for technically confident users and retrofit
+                            projects.
+                          </p>
+                        </div>
+                        <div class="border-l border-ember-300/35 pl-4">
+                          <h3 class="text-lg font-semibold text-white">
+                            Installation service
+                          </h3>
+                          <p class="mt-2 text-sm leading-7 text-sand-200/72">
+                            Offered as an extra-cost option for a cleaner,
+                            lower-friction launch.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="relative z-10 border-b border-white/8">
+          <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
+            <div class="grid gap-12 lg:grid-cols-[0.78fr,1.22fr]">
+              <div>
+                <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
+                  What it does
+                </p>
+                <h2 class="mt-4 max-w-md font-display text-4xl leading-tight text-white md:text-5xl">
+                  A calmer control experience around the sauna session.
+                </h2>
+                <p class="mt-6 max-w-md text-base leading-8 text-sand-200/75">
+                  The product is focused on visibility, atmosphere, safety, and
+                  repeatability. It is not trying to be everything at once.
+                </p>
+              </div>
+
+              <div class="rounded-[2.5rem] border border-white/10 bg-white/[0.03]">
+                <div class="divide-y divide-white/8">
+                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                        01
+                      </div>
+                      <h3 class="mt-3 text-2xl font-semibold text-white">
+                        Environment monitoring
+                      </h3>
+                    </div>
+                    <p class="text-sm leading-8 text-sand-200/74">
+                      Tracks temperature and humidity in real time so users can
+                      understand the sauna environment throughout a session
+                      instead of relying only on feel.
+                    </p>
+                  </div>
+
+                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                        02
+                      </div>
+                      <h3 class="mt-3 text-2xl font-semibold text-white">
+                        Custom session profiles
+                      </h3>
+                    </div>
+                    <p class="text-sm leading-8 text-sand-200/74">
+                      Save preferred session setups, then start and end them
+                      whenever you want. The goal is to make repeated rituals
+                      easy, personal, and quick to access.
+                    </p>
+                  </div>
+
+                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                        03
+                      </div>
+                      <h3 class="mt-3 text-2xl font-semibold text-white">
+                        LED and audio atmosphere
+                      </h3>
+                    </div>
+                    <p class="text-sm leading-8 text-sand-200/74">
+                      Control LED colors and play music through the sauna's
+                      Bluetooth speakers, either from the touchscreen itself or
+                      directly from a connected phone.
+                    </p>
+                  </div>
+
+                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                        04
+                      </div>
+                      <h3 class="mt-3 text-2xl font-semibold text-white">
+                        Smoke detection
+                      </h3>
+                    </div>
+                    <p class="text-sm leading-8 text-sand-200/74">
+                      Additional smoke sensing improves awareness and adds a
+                      practical safety layer to the overall kit.
+                    </p>
+                  </div>
+
+                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                        05
+                      </div>
+                      <h3 class="mt-3 text-2xl font-semibold text-white">
+                        Expandable platform
+                      </h3>
+                    </div>
+                    <p class="text-sm leading-8 text-sand-200/74">
+                      Future versions are planned to support interaction with
+                      ESPHome over MQTT for deeper smart-home style automation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="relative z-10 border-b border-white/8">
+          <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
+            <div class="grid gap-12 lg:grid-cols-[1.02fr,0.98fr] lg:items-center">
+              <div class="overflow-hidden rounded-[2.5rem] border border-white/10">
+                <img
+                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80"
+                  alt="Warm hospitality interior with ambient lighting"
+                  class="h-full min-h-[30rem] w-full object-cover"
+                />
+              </div>
+
+              <div id="project">
+                <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
+                  University project
+                </p>
+                <h2 class="mt-4 max-w-xl font-display text-4xl leading-tight text-white md:text-5xl">
+                  Designed as a serious product direction, not only a class
+                  demo.
+                </h2>
+                <p class="mt-6 max-w-xl text-base leading-8 text-sand-200/75">
+                  Smart Sauna is being developed by a university team as a real
+                  product concept with practical positioning. The aim is to
+                  explore a solution that can become commercially interesting,
+                  not just technically possible.
+                </p>
+                <p class="mt-4 max-w-xl text-base leading-8 text-sand-200/75">
+                  That is why the page focuses on who it helps, how it fits into
+                  existing saunas, and why the kit approach matters.
+                </p>
+
+                <div class="mt-10 grid gap-5 sm:grid-cols-2">
+                  <div class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
+                      Current scope
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-sand-200/72">
+                      Monitoring, profiles, Bluetooth audio, LED control, and
+                      smoke sensing.
+                    </p>
+                  </div>
+                  <div class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
+                      Important limitation
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-sand-200/72">
+                      The current version does not provide heating control
+                      functionality.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="relative z-10">
+          <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+            <div
+              class="rounded-[2.8rem] border border-white/10 bg-gradient-to-br from-ember-300/12 via-white/[0.04] to-transparent p-8 md:p-12"
+            >
+              <div class="grid gap-10 lg:grid-cols-[1.12fr,0.88fr] lg:items-end">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
+                    Contact
+                  </p>
+                  <h2 class="mt-4 max-w-2xl font-display text-4xl leading-tight text-white md:text-5xl">
+                    Interested in the idea, the team, or the future of the
+                    product?
+                  </h2>
+                  <p class="mt-6 max-w-2xl text-base leading-8 text-sand-200/75">
+                    If you want to follow the project, discuss the concept, or
+                    explore how a smart sauna kit like this could fit a real
+                    installation, reach out to the team.
+                  </p>
+                </div>
+
+                <div class="rounded-[2.2rem] border border-white/10 bg-[#140c09]/80 p-7">
+                  <div class="space-y-5 text-sm text-sand-200/72">
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/65">
+                        Project
+                      </div>
+                      <div class="mt-2 text-base text-white">Smart Sauna</div>
+                    </div>
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/65">
+                        Type
+                      </div>
+                      <div class="mt-2 text-base text-white">
+                        University product development project
+                      </div>
+                    </div>
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/65">
+                        Email
+                      </div>
+                      <div class="mt-2 break-all text-base text-white">
+                        2026P_k591sauna@ktuedu.onmicrosoft.com
+                      </div>
+                    </div>
+                  </div>
+
+                  <a
+                    href="mailto:2026P_k591sauna@ktuedu.onmicrosoft.com"
+                    class="mt-7 inline-flex rounded-full bg-ember-400 px-6 py-3 text-sm font-semibold text-bark-950 transition hover:-translate-y-0.5 hover:bg-ember-300"
+                  >
+                    Email the team
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="relative z-10 border-t border-white/8">
+        <div
+          class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-sand-200/60 md:flex-row md:items-center md:justify-between md:px-10"
+        >
+          <p>Smart Sauna is a university project exploring a market-ready sauna kit concept.</p>
+          <div class="flex gap-5">
+            <a href="#product" class="transition hover:text-white">Product</a>
+            <a href="#features" class="transition hover:text-white">Features</a>
+            <a href="#contact" class="transition hover:text-white">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const id = link.getAttribute("href");
+          const target = document.querySelector(id);
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
+</html>
