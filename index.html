@@ -1,12 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="lt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart Sauna | Retrofit-Ready Sauna Control Kit</title>
+    <title>Saura | Išmanus pirties valdymo rinkinys</title>
     <meta
       name="description"
-      content="Smart Sauna is a university-built sauna kit with a 7-inch touchscreen, environmental monitoring, smoke sensing, LED control, Bluetooth audio, and customizable sauna session profiles."
+      content="Saura yra KTU vystomas išmanus pirties rinkinys su 7 colių jutikliniu ekranu, temperatūros ir drėgmės stebėjimu, LED valdymu, Bluetooth muzika ir sesijos laikmačiu."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="./favicon-48x48.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,7 +69,11 @@
       body {
         font-family: "Manrope", sans-serif;
         background:
-          radial-gradient(circle at top, rgba(223, 108, 52, 0.14), transparent 32%),
+          radial-gradient(
+            circle at top,
+            rgba(223, 108, 52, 0.14),
+            transparent 32%
+          ),
           linear-gradient(180deg, #170d09 0%, #120907 38%, #0d0705 100%);
       }
 
@@ -82,22 +92,34 @@
 
       .hero-wood {
         background:
-          linear-gradient(135deg, rgba(255, 248, 239, 0.1), rgba(255, 248, 239, 0.02)),
-          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+          linear-gradient(
+            135deg,
+            rgba(255, 248, 239, 0.1),
+            rgba(255, 248, 239, 0.02)
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0)
+          );
       }
 
       .section-glow {
         background:
-          radial-gradient(circle at top left, rgba(224, 114, 60, 0.16), transparent 30%),
-          radial-gradient(circle at bottom right, rgba(167, 63, 30, 0.2), transparent 28%);
+          radial-gradient(
+            circle at top left,
+            rgba(224, 114, 60, 0.16),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(167, 63, 30, 0.2),
+            transparent 28%
+          );
       }
 
       .phone-float {
         animation: drift 6.5s ease-in-out infinite;
-      }
-
-      .steam-line {
-        animation: steam 4.2s ease-in-out infinite;
       }
 
       @keyframes drift {
@@ -109,18 +131,6 @@
           transform: translateY(-10px);
         }
       }
-
-      @keyframes steam {
-        0%,
-        100% {
-          opacity: 0.28;
-          transform: translateY(0px) scaleX(1);
-        }
-        50% {
-          opacity: 0.7;
-          transform: translateY(-8px) scaleX(1.08);
-        }
-      }
     </style>
   </head>
   <body class="min-h-screen bg-bark-950 text-sand-100 antialiased">
@@ -128,26 +138,43 @@
       <div class="grain"></div>
 
       <header class="relative z-10">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
+        <div
+          class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10"
+        >
           <a href="#top" class="flex items-center gap-3">
             <div
               class="flex h-11 w-11 items-center justify-center rounded-full border border-ember-300/20 bg-ember-400/10 text-sm font-bold tracking-[0.25em] text-ember-100"
             >
-              SS
+              SA
             </div>
             <div>
-              <div class="text-sm uppercase tracking-[0.32em] text-ember-200/70">
-                Smart Sauna
+              <div
+                class="text-sm uppercase tracking-[0.32em] text-ember-200/70"
+              >
+                Saura
               </div>
-              <div class="text-xs text-sand-200/55">University project</div>
+              <div class="text-xs text-sand-200/55">
+                KTU universiteto projektas
+              </div>
             </div>
           </a>
 
-          <nav class="hidden items-center gap-8 text-sm text-sand-200/72 md:flex">
-            <a href="#product" class="transition hover:text-white">Product</a>
-            <a href="#features" class="transition hover:text-white">Features</a>
-            <a href="#project" class="transition hover:text-white">Project</a>
-            <a href="#contact" class="transition hover:text-white">Contact</a>
+          <nav
+            class="hidden items-center gap-8 text-sm text-sand-200/72 md:flex"
+          >
+            <a href="#sprendimas" class="transition hover:text-white"
+              >Sprendimas</a
+            >
+            <a href="#funkcijos" class="transition hover:text-white"
+              >Funkcijos</a
+            >
+            <a href="#video" class="transition hover:text-white">Video</a>
+            <a href="#projektas" class="transition hover:text-white"
+              >Projektas</a
+            >
+            <a href="#kontaktai" class="transition hover:text-white"
+              >Kontaktai</a
+            >
           </nav>
         </div>
       </header>
@@ -155,41 +182,45 @@
       <main>
         <section class="relative z-10 border-b border-white/8">
           <div class="mx-auto max-w-7xl px-6 pb-20 pt-6 md:px-10 md:pb-28">
-            <div class="grid items-center gap-16 lg:grid-cols-[1.05fr,0.95fr]">
+            <div
+              class="grid items-center gap-12 lg:grid-cols-[0.86fr,1.14fr] xl:gap-14"
+            >
               <div>
                 <div
                   class="inline-flex items-center gap-3 rounded-full border border-ember-300/18 bg-ember-300/10 px-4 py-2 text-sm text-ember-100"
                 >
                   <span class="h-2 w-2 rounded-full bg-ember-300"></span>
-                  Retrofit-ready sauna control kit
+                  Išmanus pirties rinkinys naujoms ir esamoms pirtims
                 </div>
 
                 <h1
-                  class="mt-7 max-w-4xl font-display text-5xl leading-tight text-white md:text-7xl"
+                  class="mt-7 max-w-3xl font-display text-4xl leading-tight text-white md:text-6xl xl:text-[4.25rem]"
                 >
-                  Bring a smarter, warmer ritual to any sauna.
+                  Šiltesnė, išmanesnė ir patogesnė pirties patirtis su Saura.
                 </h1>
 
-                <p class="mt-7 max-w-2xl text-lg leading-8 text-sand-200/78 md:text-xl">
-                  Smart Sauna is a university-built hardware kit designed to
-                  modernize new or existing saunas without turning the whole
-                  room into a renovation project. It adds a 7-inch touchscreen,
-                  live environment sensing, session profiles, Bluetooth audio,
-                  LED mood control, and smoke detection in one clear package.
+                <p
+                  class="mt-7 max-w-2xl text-base leading-8 text-sand-200/78 md:text-lg"
+                >
+                  Saura yra KTU vystomas aparatinės įrangos rinkinys, skirtas
+                  modernizuoti pirtį be sudėtingos rekonstrukcijos. Sistema
+                  suteikia 7 colių jutiklinį ekraną, temperatūros ir drėgmės
+                  stebėjimą, Bluetooth muziką, LED spalvų valdymą ir sesijos
+                  laikmatį viename sprendime.
                 </p>
 
                 <div class="mt-9 flex flex-wrap gap-4">
                   <a
-                    href="#contact"
+                    href="#kontaktai"
                     class="rounded-full bg-ember-400 px-7 py-3.5 text-sm font-semibold text-bark-950 transition hover:-translate-y-0.5 hover:bg-ember-300"
                   >
-                    Talk to the team
+                    Susisiekti su komanda
                   </a>
                   <a
-                    href="#features"
+                    href="#funkcijos"
                     class="rounded-full border border-white/12 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
                   >
-                    Explore the kit
+                    Apžiūrėti funkcijas
                   </a>
                 </div>
 
@@ -197,35 +228,46 @@
                   class="mt-10 grid max-w-3xl gap-5 border-t border-white/8 pt-8 text-sm text-sand-200/68 sm:grid-cols-2 xl:grid-cols-4"
                 >
                   <div>
-                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
-                      Install
+                    <div
+                      class="text-xs uppercase tracking-[0.28em] text-ember-200/70"
+                    >
+                      Montavimas
                     </div>
                     <p class="mt-2 leading-7">
-                      DIY friendly, with optional paid installation.
+                      Galimas savarankiškas montavimas arba papildoma įrengimo
+                      paslauga.
                     </p>
                   </div>
                   <div>
-                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
-                      Fit
+                    <div
+                      class="text-xs uppercase tracking-[0.28em] text-ember-200/70"
+                    >
+                      Pritaikymas
                     </div>
                     <p class="mt-2 leading-7">
-                      Suitable for new builds and retrofit sauna upgrades.
+                      Tinka tiek naujai įrengiamoms, tiek jau veikiančioms
+                      pirtims.
                     </p>
                   </div>
                   <div>
-                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
-                      Safety
+                    <div
+                      class="text-xs uppercase tracking-[0.28em] text-ember-200/70"
+                    >
+                      Sesija
                     </div>
                     <p class="mt-2 leading-7">
-                      Tracks temperature, humidity, and smoke events.
+                      Stebi temperatūrą, drėgmę ir padeda aiškiai sekti pirties
+                      sesijos eigą.
                     </p>
                   </div>
                   <div>
-                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
-                      Note
+                    <div
+                      class="text-xs uppercase tracking-[0.28em] text-ember-200/70"
+                    >
+                      Pastaba
                     </div>
                     <p class="mt-2 leading-7">
-                      Current version does not control sauna heating.
+                      Dabartinė versija neskirta pirties kaitinimo valdymui.
                     </p>
                   </div>
                 </div>
@@ -241,34 +283,14 @@
                   ></div>
                 </div>
 
-                <div class="relative mx-auto max-w-xl">
+                <div class="relative mx-auto max-w-[46rem]">
                   <div
                     class="hero-wood rounded-[2.5rem] border border-white/10 p-4 shadow-glow"
                   >
-                    <div class="grid gap-4 lg:grid-cols-[0.9fr,1.1fr]">
-                      <div class="relative overflow-hidden rounded-[2rem]">
-                        <img
-                          src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
-                          alt="Warm wooden sauna interior"
-                          class="h-full min-h-[26rem] w-full object-cover"
-                        />
-                        <div
-                          class="absolute inset-0 bg-gradient-to-t from-bark-950/75 via-transparent to-transparent"
-                        ></div>
-                        <div
-                          class="absolute bottom-5 left-5 max-w-[14rem] rounded-3xl border border-white/12 bg-black/28 px-4 py-3 backdrop-blur"
-                        >
-                          <div class="text-xs uppercase tracking-[0.3em] text-ember-100/70">
-                            For the entrance
-                          </div>
-                          <p class="mt-2 text-sm leading-6 text-sand-100/85">
-                            The main touchscreen sits just outside the sauna for
-                            simple, safe access.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="relative overflow-hidden rounded-[2rem] bg-[#1a0f0a] p-5">
+                    <div class="grid gap-4">
+                      <div
+                        class="relative min-w-0 overflow-hidden rounded-[2rem] bg-[#1a0f0a] p-4 sm:p-5"
+                      >
                         <div
                           class="absolute inset-0 bg-gradient-to-b from-ember-300/10 to-transparent"
                         ></div>
@@ -276,74 +298,227 @@
                           class="absolute right-8 top-7 h-20 w-20 rounded-full bg-amber-100/8 blur-2xl"
                         ></div>
 
-                        <div class="relative phone-float mx-auto mt-2 max-w-[17rem]">
-                          <div class="rounded-[2.2rem] bg-[#120906] p-3 shadow-2xl">
+                        <div
+                          class="relative phone-float mx-auto w-full min-w-0"
+                        >
+                          <div
+                            class="rounded-[1.35rem] border border-slate-200/20 bg-[#151c1a] p-2 shadow-2xl shadow-black/35"
+                          >
                             <div
-                              class="rounded-[1.8rem] border border-ember-300/12 bg-gradient-to-b from-[#342118] to-[#1b100b] p-4"
+                              class="grid aspect-[16/9] overflow-hidden rounded-[1rem] border border-white/20 bg-[linear-gradient(135deg,rgba(203,217,208,0.18),rgba(44,57,52,0.84)_42%,rgba(22,30,28,0.96))] p-2 text-white shadow-inner shadow-white/8"
                             >
-                              <div class="flex items-center justify-between text-[0.72rem] text-sand-200/70">
-                                <span>Session profile</span>
-                                <span>19:42</span>
-                              </div>
-                              <div class="mt-4 font-display text-2xl text-white">
-                                Evening Steam
-                              </div>
-                              <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
-                                <div class="rounded-2xl bg-white/6 p-3">
-                                  <div class="text-sand-200/55">Temp</div>
-                                  <div class="mt-1 text-xl font-semibold text-white">
-                                    81°C
+                              <div
+                                class="grid min-w-0 gap-2 [grid-template-columns:2.7rem_minmax(0,1fr)_minmax(0,1.12fr)] sm:[grid-template-columns:3.2rem_minmax(0,1fr)_minmax(0,1.18fr)]"
+                              >
+                                <div
+                                  class="flex flex-col items-center justify-between rounded-xl bg-white/7 px-2 py-2"
+                                >
+                                  <div
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-400 text-white shadow-lg shadow-cyan-400/25 sm:h-10 sm:w-10"
+                                  >
+                                    <svg
+                                      viewBox="0 0 24 24"
+                                      class="h-6 w-6"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2.4"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      aria-hidden="true"
+                                    >
+                                      <path
+                                        d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0Z"
+                                      />
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-500 text-white shadow-lg shadow-violet-500/25 sm:h-10 sm:w-10"
+                                  >
+                                    <svg
+                                      viewBox="0 0 24 24"
+                                      class="h-6 w-6"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2.4"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M9 18V5l12-2v13" />
+                                      <circle cx="6" cy="18" r="3" />
+                                      <circle cx="18" cy="16" r="3" />
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-400 text-white shadow-lg shadow-amber-400/25 sm:h-10 sm:w-10"
+                                  >
+                                    <svg
+                                      viewBox="0 0 24 24"
+                                      class="h-6 w-6"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2.4"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      aria-hidden="true"
+                                    >
+                                      <circle cx="12" cy="12" r="8" />
+                                      <path d="M12 7v5l3 2" />
+                                    </svg>
+                                  </div>
+                                  <div
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-400/80 text-white shadow-lg shadow-slate-900/20 sm:h-10 sm:w-10"
+                                  >
+                                    <svg
+                                      viewBox="0 0 24 24"
+                                      class="h-6 w-6"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-width="2.4"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      aria-hidden="true"
+                                    >
+                                      <path d="M9 18h6" />
+                                      <path d="M10 22h4" />
+                                      <path
+                                        d="M8.5 14.5A6 6 0 1 1 15.5 14c-.9.6-1.5 1.6-1.5 2.5h-4c0-.8-.6-1.6-1.5-2Z"
+                                      />
+                                    </svg>
                                   </div>
                                 </div>
-                                <div class="rounded-2xl bg-white/6 p-3">
-                                  <div class="text-sand-200/55">Humidity</div>
-                                  <div class="mt-1 text-xl font-semibold text-white">
-                                    28%
+
+                                <div
+                                  class="rounded-xl border border-white/25 bg-black/15 px-3 py-3 sm:px-5 sm:py-4"
+                                >
+                                  <div
+                                    class="truncate text-base font-semibold leading-none sm:text-xl xl:text-2xl"
+                                  >
+                                    Temperatūra
+                                  </div>
+                                  <div
+                                    class="mt-4 text-xl font-semibold leading-none sm:mt-6 sm:text-2xl xl:text-3xl"
+                                  >
+                                    23.6 °C
+                                  </div>
+                                  <div
+                                    class="mt-6 text-base font-semibold leading-none sm:mt-9 sm:text-xl xl:text-2xl"
+                                  >
+                                    Drėgmė
+                                  </div>
+                                  <div
+                                    class="mt-4 text-xl font-semibold leading-none sm:mt-6 sm:text-2xl xl:text-3xl"
+                                  >
+                                    42.6 %
                                   </div>
                                 </div>
-                              </div>
-                              <div class="mt-4 rounded-2xl bg-ember-400 px-4 py-3 text-sm font-semibold text-bark-950">
-                                Start profile
-                              </div>
-                              <div class="mt-4 flex items-center gap-2">
-                                <span
-                                  class="h-3 w-3 rounded-full bg-rose-300 shadow-[0_0_0_6px_rgba(252,165,165,0.08)]"
-                                ></span>
-                                <span class="text-xs text-sand-100/72">
-                                  Lighting, music, and monitoring ready
-                                </span>
+
+                                <div class="grid gap-2">
+                                  <div
+                                    class="rounded-xl border border-white/25 bg-black/15 px-3 py-3 sm:px-4"
+                                  >
+                                    <div
+                                      class="text-base font-semibold leading-none sm:text-xl xl:text-2xl"
+                                    >
+                                      Muzika
+                                    </div>
+                                    <div
+                                      class="mt-3 h-1 rounded-full bg-white/80 shadow-[0_0_8px_rgba(255,255,255,0.55)]"
+                                    ></div>
+                                    <div
+                                      class="mt-4 grid grid-cols-3 gap-2 sm:mt-5 sm:gap-3"
+                                    >
+                                      <button
+                                        type="button"
+                                        class="flex aspect-square items-center justify-center rounded-xl border border-white/10 bg-white/10 text-white shadow-lg shadow-black/20"
+                                        aria-label="Ankstesnis kūrinys"
+                                      >
+                                        <svg
+                                          viewBox="0 0 24 24"
+                                          class="h-7 w-7"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            d="M6 5h2v14H6zM10 12l9-7v14z"
+                                          />
+                                        </svg>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="flex aspect-square items-center justify-center rounded-xl bg-violet-500 text-white shadow-lg shadow-violet-500/25"
+                                        aria-label="Paleisti muziką"
+                                      >
+                                        <svg
+                                          viewBox="0 0 24 24"
+                                          class="h-8 w-8 translate-x-0.5"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="flex aspect-square items-center justify-center rounded-xl border border-white/10 bg-white/10 text-white shadow-lg shadow-black/20"
+                                        aria-label="Kitas kūrinys"
+                                      >
+                                        <svg
+                                          viewBox="0 0 24 24"
+                                          class="h-7 w-7"
+                                          fill="currentColor"
+                                          aria-hidden="true"
+                                        >
+                                          <path
+                                            d="M16 5h2v14h-2zM5 19V5l9 7z"
+                                          />
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+
+                                  <div
+                                    class="flex flex-col items-center justify-center rounded-xl border border-white/25 bg-black/15 px-4 py-3 text-center"
+                                  >
+                                    <div
+                                      class="text-sm font-semibold leading-none sm:text-lg xl:text-xl"
+                                    >
+                                      Sesijos laikas
+                                    </div>
+                                    <div
+                                      class="mt-4 text-2xl font-semibold leading-none tracking-normal sm:mt-5 sm:text-3xl xl:text-4xl"
+                                    >
+                                      12:48
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                      </div>
 
-                        <div class="relative mt-7 space-y-3">
-                          <div class="steam-line h-px w-24 bg-amber-100/25"></div>
-                          <div class="steam-line h-px w-16 bg-amber-100/20"></div>
-                          <div class="steam-line h-px w-20 bg-amber-100/18"></div>
-                        </div>
-
-                        <div class="relative mt-7 space-y-5">
-                          <div class="flex items-start gap-3">
-                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ember-300"></span>
-                            <p class="text-sm leading-7 text-sand-200/74">
-                              Main controller inside the 7-inch touchscreen
-                              unit.
-                            </p>
+                      <div class="relative overflow-hidden rounded-[2rem]">
+                        <img
+                          src="render3.jpg"
+                          alt="Šilta medinė pirties erdvė"
+                          class="h-56 w-full object-cover sm:h-64"
+                        />
+                        <div
+                          class="absolute inset-0 bg-gradient-to-t from-bark-950/75 via-transparent to-transparent"
+                        ></div>
+                        <div
+                          class="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/12 bg-black/30 px-4 py-3 text-center backdrop-blur"
+                        >
+                          <div
+                            class="text-xs uppercase tracking-[0.3em] text-ember-100/70"
+                          >
+                            Prie įėjimo
                           </div>
-                          <div class="flex items-start gap-3">
-                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ember-300"></span>
-                            <p class="text-sm leading-7 text-sand-200/74">
-                              Secondary controller handles peripheral sensors.
-                            </p>
-                          </div>
-                          <div class="flex items-start gap-3">
-                            <span class="mt-2 h-2.5 w-2.5 rounded-full bg-ember-300"></span>
-                            <p class="text-sm leading-7 text-sand-200/74">
-                              Built for a calmer sauna experience, not just
-                              data collection.
-                            </p>
-                          </div>
+                          <p class="mt-2 text-sm leading-6 text-sand-100/85">
+                            7 colių jutiklinis ekranas montuojamas išorėje,
+                            šalia pirties durų.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -352,14 +527,20 @@
                   <div
                     class="mt-6 grid gap-4 text-sm text-sand-200/70 sm:grid-cols-3"
                   >
-                    <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4">
-                      7" touchscreen outside the sauna entrance
+                    <div
+                      class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4"
+                    >
+                      7 colių ekranas montuojamas prie pirties įėjimo
                     </div>
-                    <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4">
-                      Bluetooth music from the screen or your phone
+                    <div
+                      class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4"
+                    >
+                      Muzika per Bluetooth iš ekrano arba tiesiai iš telefono
                     </div>
-                    <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4">
-                      Profiles to start and end sessions with one tap
+                    <div
+                      class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] px-5 py-4"
+                    >
+                      Sesijos laikmatis padeda aiškiai matyti laiką pirtyje
                     </div>
                   </div>
                 </div>
@@ -368,65 +549,76 @@
           </div>
         </section>
 
-        <section id="product" class="relative z-10 border-b border-white/8">
+        <section id="sprendimas" class="relative z-10 border-b border-white/8">
           <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
             <div class="grid gap-14 lg:grid-cols-[0.9fr,1.1fr] lg:items-end">
               <div>
-                <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
-                  Why it matters
+                <p
+                  class="text-sm uppercase tracking-[0.28em] text-ember-200/70"
+                >
+                  Kodėl tai aktualu
                 </p>
-                <h2 class="mt-4 max-w-xl font-display text-4xl leading-tight text-white md:text-5xl">
-                  Built as a kit, so the upgrade feels practical.
+                <h2
+                  class="mt-4 max-w-xl font-display text-4xl leading-tight text-white md:text-5xl"
+                >
+                  Rinkinio formatas leidžia sprendimą pritaikyti praktiškai.
                 </h2>
                 <p class="mt-6 max-w-xl text-base leading-8 text-sand-200/75">
-                  Smart Sauna is meant to fit real buying decisions. Because it
-                  comes as a hardware kit, it can be integrated into a fresh
-                  sauna build or added to an existing sauna without redesigning
-                  the whole system. That makes it easier to install, easier to
-                  pitch, and easier to imagine in real use.
+                  Saura kuriama kaip realiam naudojimui tinkantis produktas.
+                  Kadangi tai modulinis aparatinės įrangos rinkinys, jį galima
+                  integruoti į naują pirtį arba sumontuoti jau įrengtoje
+                  pirtyje, neperdarant visos sistemos iš pagrindų.
                 </p>
                 <p class="mt-4 max-w-xl text-base leading-8 text-sand-200/75">
-                  Customers can install it themselves, or choose a paid
-                  installation service if they want a more turnkey experience.
+                  Vartotojas gali pasirinkti savarankišką montavimą arba už
+                  papildomą kainą užsisakyti įrengimo paslaugą.
                 </p>
               </div>
 
-              <div class="section-glow rounded-[2.5rem] border border-white/10 p-5">
+              <div
+                class="section-glow rounded-[2.5rem] border border-white/10 p-5"
+              >
                 <div class="grid gap-5 md:grid-cols-[1.05fr,0.95fr]">
                   <div class="overflow-hidden rounded-[2rem]">
                     <img
-                      src="https://images.unsplash.com/photo-1606744824163-985d376605aa?auto=format&fit=crop&w=1200&q=80"
-                      alt="Sauna bench with warm wood textures"
+                      src="man.png"
+                      alt="Pirties suolas ir šiltos medžio tekstūros"
                       class="h-full min-h-[26rem] w-full object-cover"
                     />
                   </div>
                   <div class="flex flex-col justify-between gap-5">
                     <div class="overflow-hidden rounded-[2rem]">
                       <img
-                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                        alt="Warm interior lighting detail"
+                        src="https://tse3.mm.bing.net/th/id/OIP.rvcixmmc-d87a_T3yi89-AHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Šiltas interjero apšvietimas"
                         class="h-48 w-full object-cover"
                       />
                     </div>
-                    <div class="rounded-[2rem] border border-white/10 bg-[#1a0f0a]/90 p-6">
-                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
-                        Installation paths
+                    <div
+                      class="rounded-[2rem] border border-white/10 bg-[#1a0f0a]/90 p-6"
+                    >
+                      <div
+                        class="text-xs uppercase tracking-[0.28em] text-ember-200/70"
+                      >
+                        Montavimo pasirinkimai
                       </div>
                       <div class="mt-6 space-y-5">
                         <div class="border-l border-ember-300/35 pl-4">
-                          <h3 class="text-lg font-semibold text-white">DIY install</h3>
+                          <h3 class="text-lg font-semibold text-white">
+                            Savarankiškas montavimas
+                          </h3>
                           <p class="mt-2 text-sm leading-7 text-sand-200/72">
-                            Ideal for technically confident users and retrofit
-                            projects.
+                            Tinka techniškai pasiruošusiems naudotojams ir
+                            modernizuojamoms pirtims.
                           </p>
                         </div>
                         <div class="border-l border-ember-300/35 pl-4">
                           <h3 class="text-lg font-semibold text-white">
-                            Installation service
+                            Įrengimo paslauga
                           </h3>
                           <p class="mt-2 text-sm leading-7 text-sand-200/72">
-                            Offered as an extra-cost option for a cleaner,
-                            lower-friction launch.
+                            Papildomai siūloma paslauga tiems, kurie nori
+                            sklandesnio ir greitesnio paleidimo.
                           </p>
                         </div>
                       </div>
@@ -438,99 +630,86 @@
           </div>
         </section>
 
-        <section id="features" class="relative z-10 border-b border-white/8">
+        <section id="funkcijos" class="relative z-10 border-b border-white/8">
           <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
             <div class="grid gap-12 lg:grid-cols-[0.78fr,1.22fr]">
               <div>
-                <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
-                  What it does
+                <p
+                  class="text-sm uppercase tracking-[0.28em] text-ember-200/70"
+                >
+                  Ką suteikia
                 </p>
-                <h2 class="mt-4 max-w-md font-display text-4xl leading-tight text-white md:text-5xl">
-                  A calmer control experience around the sauna session.
+                <h2
+                  class="mt-4 max-w-md font-display text-4xl leading-tight text-white md:text-5xl"
+                >
+                  Aiškesnį valdymą ir malonesnę pirties sesiją.
                 </h2>
                 <p class="mt-6 max-w-md text-base leading-8 text-sand-200/75">
-                  The product is focused on visibility, atmosphere, safety, and
-                  repeatability. It is not trying to be everything at once.
+                  Produktas orientuotas į stebėjimą, atmosferą ir patogų sesijos
+                  valdymą ekrane.
                 </p>
               </div>
 
-              <div class="rounded-[2.5rem] border border-white/10 bg-white/[0.03]">
+              <div
+                class="rounded-[2.5rem] border border-white/10 bg-white/[0.03]"
+              >
                 <div class="divide-y divide-white/8">
-                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                  <div
+                    class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8"
+                  >
                     <div>
-                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                      <div
+                        class="text-xs uppercase tracking-[0.26em] text-ember-200/70"
+                      >
                         01
                       </div>
                       <h3 class="mt-3 text-2xl font-semibold text-white">
-                        Environment monitoring
+                        Aplinkos stebėjimas
                       </h3>
                     </div>
                     <p class="text-sm leading-8 text-sand-200/74">
-                      Tracks temperature and humidity in real time so users can
-                      understand the sauna environment throughout a session
-                      instead of relying only on feel.
+                      Sistema realiu laiku stebi temperatūrą ir drėgmę, todėl
+                      naudotojas visos sesijos metu mato svarbiausią
+                      informaciją.
                     </p>
                   </div>
 
-                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                  <div
+                    class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8"
+                  >
                     <div>
-                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                      <div
+                        class="text-xs uppercase tracking-[0.26em] text-ember-200/70"
+                      >
                         02
                       </div>
                       <h3 class="mt-3 text-2xl font-semibold text-white">
-                        Custom session profiles
+                        LED ir muzikos valdymas
                       </h3>
                     </div>
                     <p class="text-sm leading-8 text-sand-200/74">
-                      Save preferred session setups, then start and end them
-                      whenever you want. The goal is to make repeated rituals
-                      easy, personal, and quick to access.
+                      Galima valdyti LED spalvas ir leisti muziką per pirties
+                      Bluetooth garsiakalbius iš jutiklinio ekrano arba iš
+                      telefono.
                     </p>
                   </div>
 
-                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
+                  <div
+                    class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8"
+                  >
                     <div>
-                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
+                      <div
+                        class="text-xs uppercase tracking-[0.26em] text-ember-200/70"
+                      >
                         03
                       </div>
                       <h3 class="mt-3 text-2xl font-semibold text-white">
-                        LED and audio atmosphere
+                        Ateities plėtra
                       </h3>
                     </div>
                     <p class="text-sm leading-8 text-sand-200/74">
-                      Control LED colors and play music through the sauna's
-                      Bluetooth speakers, either from the touchscreen itself or
-                      directly from a connected phone.
-                    </p>
-                  </div>
-
-                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
-                    <div>
-                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
-                        04
-                      </div>
-                      <h3 class="mt-3 text-2xl font-semibold text-white">
-                        Smoke detection
-                      </h3>
-                    </div>
-                    <p class="text-sm leading-8 text-sand-200/74">
-                      Additional smoke sensing improves awareness and adds a
-                      practical safety layer to the overall kit.
-                    </p>
-                  </div>
-
-                  <div class="grid gap-6 px-6 py-7 md:grid-cols-[0.72fr,1.28fr] md:px-8">
-                    <div>
-                      <div class="text-xs uppercase tracking-[0.26em] text-ember-200/70">
-                        05
-                      </div>
-                      <h3 class="mt-3 text-2xl font-semibold text-white">
-                        Expandable platform
-                      </h3>
-                    </div>
-                    <p class="text-sm leading-8 text-sand-200/74">
-                      Future versions are planned to support interaction with
-                      ESPHome over MQTT for deeper smart-home style automation.
+                      Būsimuose modeliuose planuojama sąveika su ESPHome per
+                      MQTT, kad sistema galėtų tapti dar labiau integruota.
                     </p>
                   </div>
                 </div>
@@ -541,51 +720,67 @@
 
         <section class="relative z-10 border-b border-white/8">
           <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
-            <div class="grid gap-12 lg:grid-cols-[1.02fr,0.98fr] lg:items-center">
-              <div class="overflow-hidden rounded-[2.5rem] border border-white/10">
+            <div
+              class="grid gap-12 lg:grid-cols-[1.02fr,0.98fr] lg:items-center"
+            >
+              <div
+                class="overflow-hidden rounded-[2.5rem] border border-white/10"
+              >
                 <img
-                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80"
-                  alt="Warm hospitality interior with ambient lighting"
+                  src="./render2.png"
+                  alt="Jauki erdvė su šiltu atmosferiniu apšvietimu"
                   class="h-full min-h-[30rem] w-full object-cover"
                 />
               </div>
 
-              <div id="project">
-                <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
-                  University project
+              <div id="projektas">
+                <p
+                  class="text-sm uppercase tracking-[0.28em] text-ember-200/70"
+                >
+                  KTU projektas
                 </p>
-                <h2 class="mt-4 max-w-xl font-display text-4xl leading-tight text-white md:text-5xl">
-                  Designed as a serious product direction, not only a class
-                  demo.
+                <h2
+                  class="mt-4 max-w-xl font-display text-4xl leading-tight text-white md:text-5xl"
+                >
+                  Kurdami Saurą žiūrime į realų produktą, o ne tik į prototipą.
                 </h2>
                 <p class="mt-6 max-w-xl text-base leading-8 text-sand-200/75">
-                  Smart Sauna is being developed by a university team as a real
-                  product concept with practical positioning. The aim is to
-                  explore a solution that can become commercially interesting,
-                  not just technically possible.
+                  Saura vystoma Kauno technologijos universitete kaip produkto
+                  kryptis, turinti realų pritaikymo potencialą rinkoje. Mums
+                  svarbu ne tik techninis įgyvendinimas, bet ir aiški vertė
+                  būsimam naudotojui.
                 </p>
                 <p class="mt-4 max-w-xl text-base leading-8 text-sand-200/75">
-                  That is why the page focuses on who it helps, how it fits into
-                  existing saunas, and why the kit approach matters.
+                  Todėl šiame puslapyje akcentuojame, kam sprendimas skirtas,
+                  kaip jis pritaikomas esamose pirtyse ir kodėl rinkinio
+                  formatas yra patrauklus.
                 </p>
 
                 <div class="mt-10 grid gap-5 sm:grid-cols-2">
-                  <div class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6">
-                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
-                      Current scope
+                  <div
+                    class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6"
+                  >
+                    <div
+                      class="text-xs uppercase tracking-[0.28em] text-ember-200/70"
+                    >
+                      Dabartinė apimtis
                     </div>
                     <p class="mt-4 text-sm leading-7 text-sand-200/72">
-                      Monitoring, profiles, Bluetooth audio, LED control, and
-                      smoke sensing.
+                      Temperatūros ir drėgmės stebėjimas, Bluetooth muzika, LED
+                      valdymas ir sesijos laikmatis.
                     </p>
                   </div>
-                  <div class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6">
-                    <div class="text-xs uppercase tracking-[0.28em] text-ember-200/70">
-                      Important limitation
+                  <div
+                    class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6"
+                  >
+                    <div
+                      class="text-xs uppercase tracking-[0.28em] text-ember-200/70"
+                    >
+                      Svarbus ribojimas
                     </div>
                     <p class="mt-4 text-sm leading-7 text-sand-200/72">
-                      The current version does not provide heating control
-                      functionality.
+                      Dabartinė versija kol kas nenumato kaitinimo valdymo
+                      funkcijos.
                     </p>
                   </div>
                 </div>
@@ -594,46 +789,117 @@
           </div>
         </section>
 
-        <section id="contact" class="relative z-10">
+        <section id="video" class="relative z-10 border-b border-white/8">
+          <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
+            <div class="mx-auto max-w-4xl text-center">
+              <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
+                Video pristatymas
+              </p>
+              <h2
+                class="mt-4 font-display text-4xl leading-tight text-white md:text-5xl"
+              >
+                Pažiūrėkite, kaip Saura atrodo praktiškai.
+              </h2>
+            </div>
+
+            <div
+              class="mx-auto mt-10 max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-black/35 shadow-glow"
+            >
+              <iframe
+                class="aspect-video w-full"
+                src="https://www.youtube-nocookie.com/embed/G2uVn_7_KZ8"
+                title="Saura video pristatymas"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        <section id="kontaktai" class="relative z-10">
           <div class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
             <div
               class="rounded-[2.8rem] border border-white/10 bg-gradient-to-br from-ember-300/12 via-white/[0.04] to-transparent p-8 md:p-12"
             >
-              <div class="grid gap-10 lg:grid-cols-[1.12fr,0.88fr] lg:items-end">
+              <div
+                class="grid gap-10 lg:grid-cols-[1.12fr,0.88fr] lg:items-end"
+              >
                 <div>
-                  <p class="text-sm uppercase tracking-[0.28em] text-ember-200/70">
-                    Contact
+                  <p
+                    class="text-sm uppercase tracking-[0.28em] text-ember-200/70"
+                  >
+                    Kontaktai
                   </p>
-                  <h2 class="mt-4 max-w-2xl font-display text-4xl leading-tight text-white md:text-5xl">
-                    Interested in the idea, the team, or the future of the
-                    product?
+                  <h2
+                    class="mt-4 max-w-2xl font-display text-4xl leading-tight text-white md:text-5xl"
+                  >
+                    Domina produktas, projekto idėja ar tolimesnė jo kryptis?
                   </h2>
-                  <p class="mt-6 max-w-2xl text-base leading-8 text-sand-200/75">
-                    If you want to follow the project, discuss the concept, or
-                    explore how a smart sauna kit like this could fit a real
-                    installation, reach out to the team.
+                  <p
+                    class="mt-6 max-w-2xl text-base leading-8 text-sand-200/75"
+                  >
+                    Jei norite sužinoti daugiau apie Saurą, jos pritaikymo
+                    galimybes ar susisiekti su projekto komanda, parašykite
+                    mums.
                   </p>
                 </div>
 
-                <div class="rounded-[2.2rem] border border-white/10 bg-[#140c09]/80 p-7">
+                <div
+                  class="rounded-[2.2rem] border border-white/10 bg-[#140c09]/80 p-7"
+                >
                   <div class="space-y-5 text-sm text-sand-200/72">
                     <div>
-                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/65">
-                        Project
+                      <div
+                        class="text-xs uppercase tracking-[0.28em] text-ember-200/65"
+                      >
+                        Projektas
                       </div>
-                      <div class="mt-2 text-base text-white">Smart Sauna</div>
+                      <div class="mt-2 text-base text-white">Saura</div>
                     </div>
                     <div>
-                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/65">
-                        Type
+                      <div
+                        class="text-xs uppercase tracking-[0.28em] text-ember-200/65"
+                      >
+                        Universitetas
                       </div>
                       <div class="mt-2 text-base text-white">
-                        University product development project
+                        Kauno technologijos universitetas (KTU)
                       </div>
                     </div>
                     <div>
-                      <div class="text-xs uppercase tracking-[0.28em] text-ember-200/65">
-                        Email
+                      <div
+                        class="text-xs uppercase tracking-[0.28em] text-ember-200/65"
+                      >
+                        Komanda
+                      </div>
+                      <div class="mt-2 text-base text-white">
+                        KTU studentų komanda
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        class="text-xs uppercase tracking-[0.28em] text-ember-200/65"
+                      >
+                        Tipas
+                      </div>
+                      <div class="mt-2 text-base text-white">
+                        Universiteto produkto vystymo projektas
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        class="text-xs uppercase tracking-[0.28em] text-ember-200/65"
+                      >
+                        El. paštas
                       </div>
                       <div class="mt-2 break-all text-base text-white">
                         2026P_k591sauna@ktuedu.onmicrosoft.com
@@ -645,7 +911,7 @@
                     href="mailto:2026P_k591sauna@ktuedu.onmicrosoft.com"
                     class="mt-7 inline-flex rounded-full bg-ember-400 px-6 py-3 text-sm font-semibold text-bark-950 transition hover:-translate-y-0.5 hover:bg-ember-300"
                   >
-                    Email the team
+                    Rašyti komandai
                   </a>
                 </div>
               </div>
@@ -658,11 +924,18 @@
         <div
           class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-sand-200/60 md:flex-row md:items-center md:justify-between md:px-10"
         >
-          <p>Smart Sauna is a university project exploring a market-ready sauna kit concept.</p>
+          <p>Saura yra KTU vystomas išmanios pirties produkto projektas.</p>
           <div class="flex gap-5">
-            <a href="#product" class="transition hover:text-white">Product</a>
-            <a href="#features" class="transition hover:text-white">Features</a>
-            <a href="#contact" class="transition hover:text-white">Contact</a>
+            <a href="#sprendimas" class="transition hover:text-white"
+              >Sprendimas</a
+            >
+            <a href="#funkcijos" class="transition hover:text-white"
+              >Funkcijos</a
+            >
+            <a href="#video" class="transition hover:text-white">Video</a>
+            <a href="#kontaktai" class="transition hover:text-white"
+              >Kontaktai</a
+            >
           </div>
         </div>
       </footer>
